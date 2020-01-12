@@ -3,7 +3,7 @@
 
 ## Simple script to configure a SPAN session on XenServer or XCP-ng
 
-When a VM boots or reboots, then the first available domU ID is assigned to that VM. Since virtual interface (vif) labels depend on the assigned domU, vif labels are difficult or impossible to predict, thus port mirroring configurations are not persistent through reboots. MagicSPAN tries to eliminate this limitation by making the port mirroring configuration to depend on persistent attributes of VMs, like VM and network name/label.    
+When a VM boots or reboots, then the first available domU ID is assigned to that VM. Since virtual interface (vif) labels depend on the assigned domU, vif labels are difficult or impossible to predict, thus port mirroring configurations are not persistent across reboots. MagicSPAN tries to eliminate this problem by making the port mirroring configuration to depend on constant attributes of VMs, like VM and network name/label.    
 
 Usage: `magicspan.sh {-s|--source-vm} vm1[,vm2,..] {-d|--destination-vm} vm1[,vm2,..] {-o|--output-vm} vm3 {-n|--network} lan1 {-p|--source-pif} [eth0] [-h] [-t]`
 
